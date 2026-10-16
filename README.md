@@ -5,6 +5,16 @@ backend. Identité visuelle sombre, moderne et technique, responsive et accessib
 
 Conforme au cahier des charges « Portfolio professionnel de développeur » v1.0.
 
+## Publication en ligne (GitHub Pages)
+
+- **Site** : https://05jordy.github.io/portfolio/
+- **Dépôt** : https://github.com/05Jordy/portfolio
+- Déploiement automatique via GitHub Actions (`.github/workflows/deploy.yml`) : à chaque
+  push sur `main`, le workflow lint, build et publie `client/dist/` sur GitHub Pages.
+- Pages doit rester configuré : **Settings → Pages → Source : GitHub Actions**.
+- Seul le front est publié ici : l'API `/api/` n'est pas hébergée sur Pages, le formulaire de
+  contact affiche donc un message d'erreur en ligne (backend prévu pour Ubuntu Server).
+
 ## Structure
 
 ```
