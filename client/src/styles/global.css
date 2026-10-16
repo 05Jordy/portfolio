@@ -408,6 +408,13 @@ a:hover {
   margin-top: 64px;
 }
 
+.cert-card {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  height: 100%;
+}
+
 /* ---------- Compétences ---------- */
 
 .skill-group {

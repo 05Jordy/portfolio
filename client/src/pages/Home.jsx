@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { profile } from "../data/profile.js";
 import { projects } from "../data/projects.js";
+import { certifications } from "../data/skills.js";
 import ProjectCard from "../components/ProjectCard.jsx";
+import CertificationCard from "../components/CertificationCard.jsx";
 import Reveal from "../components/Reveal.jsx";
 
 const highlights = [
@@ -68,6 +70,26 @@ export default function Home() {
               <Reveal key={item.title} delay={index * 90} className="card">
                 <h3 className="card-title">{item.title}</h3>
                 <p className="card-text">{item.text}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <Reveal className="section-head">
+            <span className="section-kicker">Formation</span>
+            <h2 className="section-title">Cursus validés</h2>
+            <p className="section-intro">
+              Formations LinkedIn Learning terminées et confirmées par des posts publics — Java et
+              applications Android.
+            </p>
+          </Reveal>
+          <div className="grid-2">
+            {certifications.map((certification, index) => (
+              <Reveal key={certification.name} delay={index * 90}>
+                <CertificationCard certification={certification} />
               </Reveal>
             ))}
           </div>

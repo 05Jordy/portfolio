@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { skillCategories, certifications } from "../data/skills.js";
+import CertificationCard from "../components/CertificationCard.jsx";
 import Reveal from "../components/Reveal.jsx";
 
 export default function Skills() {
@@ -12,7 +13,7 @@ export default function Skills() {
           <p className="section-intro">
             Classées par catégorie, avec une mention honnête : « Utilisé dans ce projet » pour ce
             que j'emploie réellement ici, « En cours d'approfondissement » pour ce que
-            j'apprends encore.
+            j'apprends encore, « Formation complétée » pour les cursus terminés.
           </p>
         </Reveal>
 
@@ -38,31 +39,17 @@ export default function Skills() {
 
         <div className="subsection">
           <Reveal className="section-head">
-            <span className="section-kicker">Certifications</span>
-            <h2 className="section-title">Certifications obtenues</h2>
+            <span className="section-kicker">Formation</span>
+            <h2 className="section-title">Cursus validés</h2>
             <p className="section-intro">
-              Validées sur LinkedIn, en complément de mes projets réalisés.
+              Deux cursus LinkedIn Learning terminés, chacun confirmé par un post public
+              vérifiable.
             </p>
           </Reveal>
           <div className="grid-2">
             {certifications.map((certification, index) => (
-              <Reveal key={certification.name} delay={index * 80} className="card">
-                <span className="badge badge-accent">{certification.issuer}</span>
-                <h3 className="card-title" style={{ marginTop: "12px" }}>
-                  {certification.name}
-                </h3>
-                {certification.url ? (
-                  <a
-                    className="card-text"
-                    href={certification.url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Vérifier la certification
-                  </a>
-                ) : (
-                  <p className="card-text">Certification professionnelle {certification.issuer}</p>
-                )}
+              <Reveal key={certification.name} delay={index * 80}>
+                <CertificationCard certification={certification} />
               </Reveal>
             ))}
           </div>

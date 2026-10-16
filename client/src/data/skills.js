@@ -17,7 +17,12 @@ export const skillCategories = [
       { name: "Express", level: "Utilisé dans ce projet" },
       { name: "API REST", level: "Utilisé dans ce projet" },
       { name: "Validation & sécurité serveur", level: "Utilisé dans ce projet" },
+      { name: "Java", level: "Formation complétée" },
     ],
+  },
+  {
+    name: "Mobile",
+    skills: [{ name: "Android (Java)", level: "Formation complétée" }],
   },
   {
     name: "Bases de données",
@@ -39,10 +44,16 @@ export const skillCategories = [
 ];
 
 export const certifications = [
-  { name: "Java", issuer: "LinkedIn", url: null },
   {
-    name: "Java — Développeur d'application mobile",
-    issuer: "LinkedIn",
-    url: null,
+    name: "Devenir développeur / développeuse Java",
+    issuer: "LinkedIn Learning",
+    url: "https://lnkd.in/p/e9Es-rwn",
+    details: ["Core Java", "Spring", "Jakarta EE", "Eclipse"],
+  },
+  {
+    name: "Devenir développeur / développeuse d'applications Android",
+    issuer: "LinkedIn Learning",
+    url: "https://lnkd.in/p/eYG8VrBc",
+    details: ["Android", "Technologies mobiles"],
   },
 ];
