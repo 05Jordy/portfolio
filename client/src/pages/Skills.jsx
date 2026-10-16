@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { skillCategories } from "../data/skills.js";
+import { skillCategories, certifications } from "../data/skills.js";
 import Reveal from "../components/Reveal.jsx";
 
 export default function Skills() {
@@ -34,6 +34,38 @@ export default function Skills() {
               </ul>
             </Reveal>
           ))}
+        </div>
+
+        <div className="subsection">
+          <Reveal className="section-head">
+            <span className="section-kicker">Certifications</span>
+            <h2 className="section-title">Certifications obtenues</h2>
+            <p className="section-intro">
+              Validées sur LinkedIn, en complément de mes projets réalisés.
+            </p>
+          </Reveal>
+          <div className="grid-2">
+            {certifications.map((certification, index) => (
+              <Reveal key={certification.name} delay={index * 80} className="card">
+                <span className="badge badge-accent">{certification.issuer}</span>
+                <h3 className="card-title" style={{ marginTop: "12px" }}>
+                  {certification.name}
+                </h3>
+                {certification.url ? (
+                  <a
+                    className="card-text"
+                    href={certification.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Vérifier la certification
+                  </a>
+                ) : (
+                  <p className="card-text">Certification professionnelle {certification.issuer}</p>
+                )}
+              </Reveal>
+            ))}
+          </div>
         </div>
 
         <Reveal delay={120} className="hero-actions">

@@ -5,6 +5,7 @@ export const skillCategories = [
       { name: "React", level: "Utilisé dans ce projet" },
       { name: "Vite", level: "Utilisé dans ce projet" },
       { name: "JavaScript (ES6+)", level: "Utilisé dans ce projet" },
+      { name: "TypeScript", level: "Utilisé sur mes projets" },
       { name: "HTML5 / CSS3", level: "Utilisé dans ce projet" },
       { name: "Responsive & accessibilité", level: "Utilisé dans ce projet" },
     ],
@@ -34,5 +35,14 @@ export const skillCategories = [
       { name: "Nginx", level: "En cours d'approfondissement" },
       { name: "Postman", level: "Utilisé dans ce projet" },
     ],
+  },
+];
+
+export const certifications = [
+  { name: "Java", issuer: "LinkedIn", url: null },
+  {
+    name: "Java — Développeur d'application mobile",
+    issuer: "LinkedIn",
+    url: null,
   },
 ];

@@ -402,6 +402,12 @@ a:hover {
   color: var(--accent);
 }
 
+/* ---------- Sous-sections ---------- */
+
+.subsection {
+  margin-top: 64px;
+}
+
 /* ---------- Compétences ---------- */
 
 .skill-group {
