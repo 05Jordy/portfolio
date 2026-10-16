@@ -19,12 +19,19 @@ function ScrollToTop() {
 export default function App() {
   return (
     <div className="app">
-      <a className="skip-link" href="#main-content">
+      <a
+        className="skip-link"
+        href="#main-content"
+        onClick={(event) => {
+          event.preventDefault();
+          document.getElementById("main-content")?.focus();
+        }}
+      >
         Aller au contenu principal
       </a>
       <ScrollToTop />
       <Navbar />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/a-propos" element={<About />} />
